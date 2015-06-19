@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BLE_control_edison" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="u3v-dd-c1L">
+                                <rect key="frame" x="206" y="338" width="188" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.31540830291970801" blue="0.61074361313868608" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="114" constant="114" id="69C-fa-0Al"/>
+                                    <constraint firstAttribute="height" constant="30" id="LdN-VP-AAY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="czY-Hh-rV7"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Kg5-hi-i2r"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwy-Tw-7Mn">
+                                <rect key="frame" x="211" y="165" width="178" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="START SCAN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanBtnTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qdu-cs-WnA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygR-Bv-DWt">
+                                <rect key="frame" x="286" y="290" width="29" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1IT-Cv-iJO"/>
+                                    <constraint firstAttribute="width" constant="29" id="ekL-oV-ruR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDH-gd-M3r">
+                                <rect key="frame" x="284" y="215" width="32" height="16"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.043489058595073786" green="0.44035127737226276" blue="0.80006377551020402" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ygR-Bv-DWt" secondAttribute="centerX" id="2y6-za-2zd"/>
+                            <constraint firstAttribute="centerX" secondItem="gDH-gd-M3r" secondAttribute="centerX" id="EuU-Sq-NpR"/>
+                            <constraint firstAttribute="centerX" secondItem="ygR-Bv-DWt" secondAttribute="centerX" id="HSV-fo-0jj"/>
+                            <constraint firstAttribute="centerY" secondItem="Wwy-Tw-7Mn" secondAttribute="centerY" constant="111" id="Hf0-br-CJw"/>
+                            <constraint firstAttribute="centerY" secondItem="u3v-dd-c1L" secondAttribute="centerY" constant="-53" id="IVb-5p-5nF"/>
+                            <constraint firstAttribute="centerX" secondItem="Wwy-Tw-7Mn" secondAttribute="centerX" id="XRb-Ol-2Zf"/>
+                            <constraint firstAttribute="centerY" secondItem="ygR-Bv-DWt" secondAttribute="centerY" id="XdI-bb-PGs"/>
+                            <constraint firstAttribute="centerX" secondItem="u3v-dd-c1L" secondAttribute="centerX" id="bve-Kz-iNp"/>
+                            <constraint firstAttribute="centerX" secondItem="ygR-Bv-DWt" secondAttribute="centerX" id="dZS-bp-UUg"/>
+                            <constraint firstAttribute="centerX" secondItem="u3v-dd-c1L" secondAttribute="centerX" id="sm0-ZS-hX9"/>
+                            <constraint firstAttribute="centerY" secondItem="ygR-Bv-DWt" secondAttribute="centerY" id="uqs-YU-3I7"/>
+                            <constraint firstAttribute="centerY" secondItem="gDH-gd-M3r" secondAttribute="centerY" constant="77.5" id="vBQ-sh-L8q"/>
+                            <constraint firstAttribute="centerY" secondItem="u3v-dd-c1L" secondAttribute="centerY" constant="-53" id="zOE-hH-ytC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Slider" destination="u3v-dd-c1L" id="bSW-iR-HiP"/>
+                        <outlet property="SliderVolume" destination="ygR-Bv-DWt" id="i9f-uK-Zuf"/>
+                        <outlet property="connectionState" destination="gDH-gd-M3r" id="C4k-Qs-MiL"/>
+                        <outlet property="scanBtnTapped" destination="Wwy-Tw-7Mn" id="n9Y-jl-GbS"/>
+                        <outlet property="slider" destination="u3v-dd-c1L" id="ibp-U3-Lcu"/>
+                        <outlet property="sliderVolume" destination="ygR-Bv-DWt" id="Rk0-US-0bL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+</document>
